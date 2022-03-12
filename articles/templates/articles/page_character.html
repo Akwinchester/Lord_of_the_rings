@@ -1,0 +1,41 @@
+{% extends 'articles/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Справка по персонажу </title>
+{% endblock %}
+
+{% block cats %}
+    <div class="dropdown">
+        <a class="add_form"  >Категории</a>
+        <div class="dropdown-content">
+            {% for i in cats %}
+                <p></p>
+                <a class="list" href="{{ i.get_absolute_url }}">{{ i.type_objects }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+
+
+    {% for i in posts %}
+        <div class="block_post">
+            <div class="group">
+                <h2>{{ i.name_character }}</h2>
+                <div class="item1">
+
+                    {% if i.photo_character %}
+                        <img class = "img-article-left thumb" src="{{ i.photo_character.url }}" >
+                    {% endif %}
+                </div>
+
+                <div class="item2">
+                    <p class="post"> {{ i.text_character|truncatechars:1800 }} <a href="{% url "personal_page" i.id %}">Подробнее...</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    {% endfor %}
+{% endblock %}

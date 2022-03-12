@@ -1,0 +1,212 @@
+html{
+    box-sizing: border-box;
+}
+body {
+	font-family: 'Arial';
+	background-image: url("../images/base_1.jpg");
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p.post{
+    box-sizing: border-box;
+	background-image: url("../images/paper_6.jpg");
+	background-size: contain;
+    background-repeat: repeat;
+  	text-align: justify;
+  	font-size: 18px;
+    padding: 40px;
+    border-radius: 15px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+img.img-article-left.thumb {
+    box-sizing: border-box;
+	width: 100%;
+	aspect-ratio: 1/1.2;
+    border-style: inset;
+    object-fit: cover;
+    border-image: url("../images/ramka_2.jpg") 80 80 80 80;
+    object-position: top;
+
+}
+p.personal{
+    text-align: center;
+}
+img.personal{
+    width: 50vw;
+    aspect-ratio: 2/1.5;
+    border-style: inset;
+    object-fit: cover;
+    object-position: top;
+    border-image: url("../images/ramka_2.jpg") 80 80 80 80;
+
+}
+/*
+Это сетка
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 20% auto;
+    grid-gap: 10px;
+
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+!*  padding: 20px 0;*!
+  font-size: 30px;
+}*/
+.block_post{
+    /*background-color: white;*/
+    margin-bottom: 35px;
+/*    aspect-ratio: 5/2;*/
+
+}
+.item1{
+    box-sizing: border-box;
+    float: left;
+    display: block;
+    width: 25%;
+    margin-left: 0.5%;
+}
+.item2{
+    float: right;
+    display: block;
+    width: 73%;
+    margin-right: 0.75%;
+    margin-left: 0.75%;
+}
+
+h2{
+    box-sizing: border-box;
+    background-image: url("../images/paper_6.jpg");
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    top:10px;
+    margin-left: 0.5%;
+    width: 25%;
+}
+.personal_item1{
+    text-align: center;
+}
+.personal_item2{
+    display: block;
+    text-align: justify;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+.footer{
+    background-color:#676b75;
+    /*margin-top: 30px;*/
+    border-radius: 5px;
+}
+
+.header{
+    background-image: url("../images/paper_6.jpg");
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.pagination a {
+    color: wheat;
+    text-decoration: none;
+
+}
+.pagination nav{
+    display: inline-block;
+}
+ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+    text-align: center;
+   }
+li.pagination {
+    display: inline-block;
+    background-color: #264b5d;
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+    color: wheat;
+    padding: 8px 16px;
+   }
+li.chose{
+    display: inline-block;
+    background-color: #264b5d;
+    margin-right: 5px; /* Отступ слева */
+    border: 2px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+    color: wheat;
+    padding: 12px 16px;
+}
+.form{
+    background-color: wheat;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: justify;
+    width: 40vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30vh;
+}
+.form_add_page {
+    background-color: wheat;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: justify;
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30vh;
+}
+#id_text_character{
+    width: 80%;
+}
+.link_to_add_form{
+    text-align: right;
+    margin-right: 10%;
+}
+.add_form{
+    text-decoration: none;
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px gray;
+}
+p.header_form{
+    text-align: center;
+    font-size: 25px;
+}
+.dropdown {
+  position: relative;
+  display:inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-image: url("../images/paper_6.jpg");
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 5px;
+
+}
+/* Показать выпадающее меню при наведении */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+a.list{
+    text-decoration: none;
+    background-color: #333333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px gray;
+}

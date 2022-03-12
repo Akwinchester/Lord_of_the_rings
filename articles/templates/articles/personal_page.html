@@ -1,0 +1,15 @@
+{% extends "articles/base.html" %}
+{% block content %}
+    <div class="block_post">
+
+    <div class="group">
+        <div class="personal_item1">
+            <img class="personal" src="{{ character.photo_character.url }}">
+        </div>
+        <div class="personal_item2">
+            <p class="post">{{ character.text_character }}</p>
+        </div>
+        </div>
+    </div>
+
+{% endblock %}

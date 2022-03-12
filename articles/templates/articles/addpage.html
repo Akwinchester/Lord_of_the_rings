@@ -1,0 +1,15 @@
+{% extends 'articles/base.html' %}
+{% block content %}
+    {% if request.user.is_authenticated %}
+    <div class = "form_add_page">
+    <p class="header_form">Добавление статьи</p>
+    <form enctype="multipart/form-data" action="{% url 'Addpage' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить</button>
+    </form>
+    </div>
+    {% else %}
+        <p class="form"> Чтобы иметь возможность добавить статью необходимо авторизоваться. Если у вас нет учетной записи пройдите регистрацию.</p>
+    {% endif %}
+{% endblock %}
