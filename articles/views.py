@@ -2,14 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponse
 from .models import page_character, Category
 from django.views.generic import ListView, CreateView
-from django.contrib.auth.views import LoginView
-from .forms import Add_post_form, Add_user_form
+from .forms import Add_post_form
 from django.forms import ModelForm
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from  django.contrib.auth import logout
 from django.urls import reverse_lazy
-# from django.core.paginator import Paginator #надо использовать для пагинации в представлениях-функциях
+
 
 class Page_character(ListView):
     paginate_by = 3
@@ -63,21 +60,3 @@ def addpage(request):
         'form': form
     }
     return render(request, template_name="articles/addpage.html", context=context)
-
-# класс-представление Регистрации пользователя
-class RegisterUser(CreateView):
-    # form_class = UserCreationForm
-    form_class = Add_user_form
-    template_name = 'articles/register.html'
-    success_url = reverse_lazy('page_character')
-
-class Login_user(LoginView):
-    form_class = AuthenticationForm
-    template_name = "articles/login.html"
-    def get_success_url(self):
-        return reverse_lazy('page_character')
-
-def logout_view(request):
-    logout(request)
-    print("Нажал кнопку выйти")
-    return redirect('Login_user_page')

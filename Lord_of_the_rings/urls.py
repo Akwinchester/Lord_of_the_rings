@@ -20,7 +20,8 @@ from Lord_of_the_rings import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('articles.urls'))
+    path('', include('articles.urls')),
+    path('user/', include('work_with_user.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
